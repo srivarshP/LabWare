@@ -1,0 +1,23 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Project:</h2>
+C:\Keil\Labware\Lab13_DAC\Lab13.uvproj
+Project File Date:  04/21/2024
+
+<h2>Output:</h2>
+Build target 'Lab13'
+compiling Lab13.c...
+Piano.h(34): warning:  #1-D: last line of file ends without a newline
+Lab13.c(65): warning:  #1-D: last line of file ends without a newline
+compiling Sound.c...
+Sound.c(90): warning:  #1-D: last line of file ends without a newline
+compiling DAC.c...
+DAC.c(47): warning:  #1-D: last line of file ends without a newline
+compiling Piano.c...
+Piano.h(34): warning:  #1-D: last line of file ends without a newline
+Piano.c(56): warning:  #1-D: last line of file ends without a newline
+linking...
+Program Size: Code=6388 RO-data=9420 RW-data=88 ZI-data=1816  
+"Lab13.axf" - 0 Error(s), 6 Warning(s).

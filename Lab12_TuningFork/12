@@ -1,0 +1,22 @@
+#include "TM4C123GH6PM.h"
+
+void delay(int milliseconds) {
+    int i, j;
+    for (i = 0; i < milliseconds; i++)
+        for (j = 0; j < 3180; j++){}  // Adjust this delay according to your system clock
+}
+
+int main(void) {
+    SYSCTL->RCGCGPIO |= (1U << 0);  // Enable GPIO Port A clock
+    GPIOA->DIR |= (1U << 5);        // Set PA5 as output
+    GPIOA->DIR &= ~(1U << 4);       // Set PA4 as input
+
+    while(1) {
+        if (GPIOA->DATA & (1U << 4)) { // If PA4 is HIGH
+            GPIOA->DATA &= ~(1U << 5); // Set PA5 LOW
+        } else {
+            GPIOA->DATA |= (1U << 5);  // Set PA5 HIGH
+        }
+        
+    }
+}
